@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - main
-  workflow_dispatch: # ئەمە ڕێگەت پێدەدات بە دەستی (Manual) بیڵدەکە ئیش پێ بکەیت
+  workflow_dispatch:
 
 jobs:
   export-game:
@@ -23,7 +23,7 @@ jobs:
           archive_output: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
